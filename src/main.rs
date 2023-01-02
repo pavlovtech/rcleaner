@@ -25,6 +25,8 @@ fn main() {
 
     println!("Removing code chrome cache");
     _ = remove_dir_contents(&chrome_code_cache_dir);
+
+    io::stdin().read_line(&mut String::new()).unwrap();
 }
 
 fn get_os_var_plus_folder(var: &String, folder: &String) -> String {
